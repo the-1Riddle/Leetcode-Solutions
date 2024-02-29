@@ -57,3 +57,39 @@ public class Solution
         return false;
     }
 }
+
+
+/**
+ * Runtime: 115 ms
+ * Memory Usage: 77.8 MB
+ */
+
+
+using System.Collections.Generic;
+
+public class Solution {
+    public bool CanCross(int[] stones) {
+        if (stones[1] != 1) {
+            return false;
+        }
+
+        Dictionary<int, HashSet<int>> lastJumpUnits = new Dictionary<int, HashSet<int>>();
+        foreach (int stone in stones) {
+            lastJumpUnits.Add(stone, new HashSet<int>());
+        }
+        lastJumpUnits[1].Add(1);
+
+        for (int i = 0; i < stones.Length - 1; i++) {
+            int s = stones[i];
+            foreach (int j in lastJumpUnits[s]) {
+                foreach (int k in new int[] { j - 1, j, j + 1 }) {
+                    if (k > 0 && lastJumpUnits.ContainsKey(s + k)) {
+                        lastJumpUnits[s + k].Add(k);
+                    }
+                }
+            }
+        }
+
+        return lastJumpUnits[stones[^1]].Count > 0;
+    }
+}
