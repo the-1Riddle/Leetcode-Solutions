@@ -1,7 +1,6 @@
 # Time:  O(n), n is size of Person Table
 # Space: O(n)
 
-SELECT p.firstName, p.lastName, a.city, a.state 
-from Person p left outer join Address a 
-on p.personId=a.personId;
+SELECT P.firstName, P.lastName, A.city, A.state FROM Person P
+LEFT JOIN Address A ON P.personId = A.personId;
 
