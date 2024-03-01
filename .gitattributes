@@ -1,5 +1,2 @@
 # mysql
 *.sql linguist-detectable=true
-
-# C-sharp
-*.cs linguist-detectable=true 
