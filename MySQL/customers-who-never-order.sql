@@ -5,7 +5,7 @@ SELECT Name AS Customers
 FROM Customers 
 WHERE Id NOT IN (SELECT CustomerId FROM Orders)
 
-  /** solution two */
+  /** solution two **/
 
 SELECT Customers.Name AS Customers 
 FROM (Customers LEFT JOIN Orders ON Customers.Id = Orders.CustomerId) 
