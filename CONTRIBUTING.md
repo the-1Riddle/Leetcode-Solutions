@@ -154,9 +154,11 @@ Go to the GitHub page of _your fork_, and **make a pull request**:
 
 Read more about pull requests on the [GitHub help pages](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
-Now wait, until _your Pull Request_ is approved! If there are any conflicts, you will get a notification.
+- Now wait, until _your Pull Request_ is approved! If there are any conflicts, you will get a notification.
 
 </details>
+
+<br>
 
 ## Wait for feedback
 Before accepting your contributions, we will review them. You may get feedback
